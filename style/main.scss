@@ -1,0 +1,500 @@
+$bayBlue: #68A69F;
+$grey: #808080;
+$darkGrey: #2F3035;
+
+$headerFont: "Oswald", Helvetica Neu, Arial, sans-serif;
+$bodyFont: "Playfair Display", "Times New Roman", serif;
+
+
+@import "setup";
+@import "juice";
+@import "generalStyle";
+@import "navHeader";
+
+
+
+.sectionTitle {
+	margin: 40px 0;
+
+	h4 {
+		margin-bottom: 5px;
+	}
+
+	h2 {
+		margin: 10px 0 15px 0;
+	}
+
+	.dots {
+		margin: 0 auto;
+		width: 20px;
+		border-top: 4px dotted $bayBlue;
+	}
+}
+
+// Welcome
+section.welcome {
+	padding-bottom: 0;
+
+
+	.deviceImg {
+		margin: 0 auto;
+		width: 90%;
+
+		img {
+			width: 100%;
+			display: block;
+			margin: 0;
+		}
+	}
+}
+
+// Soft Skills Gallery
+section.softSkills {
+	padding: 0;
+}
+
+ul.skillsGallery {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+
+	li.skillsItem {
+		width: 25%;
+		margin: 0;
+		position: relative;
+		
+		
+		img {
+			width: 100%;
+			display: block;
+		}
+
+		&:hover {
+
+			div.skill {
+				display: none;
+			}
+
+			div.skillHover {
+				display: block;
+			}
+		}
+
+		div.skill {
+			width: 150px;
+			height: 150px;
+			background-color: rgba($bayBlue, 0.7);
+			border-radius: 50%;
+			display: flex;
+			padding: 15px;
+			@include centerer;
+
+			h3 {
+				margin: auto;
+				color: white;
+				font-weight: 300;
+			}
+			
+		}
+
+		div.skillHover {
+			display: none;
+			width: 90%;
+			height: 90%;
+			@include centerer;
+
+			div.skillHoverWrap {
+				width: 100%;
+				height: 100%;
+				background-color: rgba($bayBlue, 0.7);
+				text-align: center;
+				padding: 0 15px;
+				color: white;
+
+				display: flex;
+				flex-flow: column;
+				justify-content: center;
+
+				h3 {
+					font-weight: 300;
+				}
+
+				p {
+					color: white;
+					margin-top: 0;
+				}
+
+				button {
+					color: white;
+					padding: 5px 10px;
+					background-color: transparent;
+					border: 2px solid white;
+					font-size: 1.1rem;
+					margin: 10px auto 0 auto;
+					font-family: $headerFont;
+					letter-spacing: 1.5px;
+				}
+			}
+		}
+
+	}
+}
+
+
+// Areas of Expertise
+ul.expertiseList {
+	list-style: none;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-around;
+
+	li {
+		width: 23%;
+		text-align: center;
+		
+	}
+
+}
+
+
+// Shop Section
+section.shop {
+	background-image: url(../images/shop.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 250px;
+	color: white;
+	text-align: center;
+
+	a {
+		color: white;
+		text-transform: uppercase;
+		padding: 15px;
+		display: inline-block;
+		margin-top: 15px;
+		border: 3px solid white;
+
+	}
+}
+
+
+// Portfolio Section
+section.portfolio {
+	padding-bottom: 0;
+}
+
+ul.workCategory {
+	list-style: none;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 30px;
+
+
+	li {
+		padding: 8px 15px;
+		margin: 10px;
+		border: 2px solid $bayBlue;
+		color: $grey;
+		text-transform: uppercase;
+		font-size: 1.2rem;
+		font-family: $headerFont;
+		font-weight: 300;
+		letter-spacing: 1.4px;
+		transition: all .3s;
+
+		&:hover {
+			background-color: $bayBlue;
+			color: white;
+		}
+	}
+}
+
+ul.workGallery {
+	display: flex;
+	flex-flow: row wrap;
+	list-style: none;
+
+	li.workItem {
+		width: 20%;
+		position: relative;
+
+		img {
+			width: 100%;
+			display: block;
+		}
+
+		div.overlay {
+			background-color: rgba($bayBlue, 0.7);
+			position: absolute;
+			top: 10px;
+			bottom: 10px;
+			left: 10px;
+			right: 10px;
+			color: white;
+			padding-top: calc(50% - 6rem);
+			opacity: 0;
+			transition: all .2s;
+
+			&:hover {
+				opacity: 1;
+			}
+
+		}
+	}
+}
+
+
+// Services 
+ul.serviceList {
+	list-style: none;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+
+	li {
+		width: 30%;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		margin-bottom: 30px;
+
+		.serviceIcon {
+			width: 20%;
+			position: relative;
+
+			img {
+				width: 100%;
+				position: absolute;
+				top: 10px;
+			}
+		}
+
+		.serviceDescription {
+			width: 70%;
+
+			h3 {
+				text-align: left;
+			}
+		}
+	}
+}
+
+
+// Stats Section
+section.stats {
+	background-image: url(../images/bg1.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+ul.statsList {
+	list-style: none;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	text-align: center;
+	align-items: center;
+
+	h1 {
+		color: $bayBlue;
+	}
+
+	h5 {
+		color: white;
+		margin: 5px;
+	}
+}
+
+
+// Blog Section
+ul.blogGallery {
+	list-style: none;
+	display: flex;
+	flex-flow: wrap;
+	justify-content: space-around;
+
+	img {
+		width: 100%;
+	}
+
+	li.blogItem {
+		width: 30%;
+
+		div.blogimg {
+			position: relative;
+
+			div.blogDate {
+				@include centerer;
+				width: 130px;
+				height: 130px;
+				background-color: rgba($bayBlue, 0.6);
+				border-radius: 50%;
+				display: flex;
+
+				h3 {
+					margin: auto;
+					color: white;
+				}
+			}
+		}
+
+		div.blogInfo {
+			height: 150px;
+			display: block;
+			position: relative;
+
+			.blogInfoInner {
+				@include centerer;
+				top: 40px;
+				width: 90%;
+
+				img {
+					width: 35%;
+					border-radius: 50%;
+					border: 2px solid $bayBlue;
+					margin: 0 auto;
+					display: block;
+				}
+
+				h3 {
+					margin-bottom: 10px
+				}
+
+				h4 {
+					color: $bayBlue;
+					margin-top: 0;	
+				}
+			}
+		}
+
+	}
+}
+
+
+// Clients Section
+section.clients {
+	background-color: $grey;
+
+	ul.clientsList {
+		list-style: none;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		align-items: center;
+
+		li {
+			width: 13%;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+
+
+// Footer 
+footer {
+	background-color: $darkGrey;
+	padding: 30px 0;
+	color: white;
+
+	h3 {
+		text-align: left;
+	}
+
+	div.wrapper {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+	}
+}
+
+
+div.footerItem {
+	width: 23%;
+
+	ul li {
+		list-style: inside;
+		font-size: 1.2rem;
+		margin: 10px;
+		font-family: $bodyFont;
+	}
+
+	button {
+		display: none;
+		width: 100%;
+		margin-bottom: 3px;
+		border: none;
+		background-color: $bayBlue;
+		color: white;
+		padding: 8px 0;
+		font-family: $headerFont;
+		text-transform: uppercase;
+		letter-spacing: 1.5px;
+		font-size: 1.2rem;
+		transition: all .3s;
+
+		&:hover {
+			background-color: white;
+			color: $bayBlue;
+		}
+	}
+}
+
+div.tags p{
+	display: inline-block;
+	background-color: $grey;
+	color: white;
+	margin: 3px;
+	padding: 5px 10px;
+	transition: all .3s;
+
+	&:hover {
+		background-color: $bayBlue;
+	}
+}
+
+div.socialIcons {
+	margin-top: 70px;
+
+	div.icons {
+		width: 35px;
+		height: 35px;
+		margin-right: 2px;
+		border-radius: 50%;
+		border: 2px solid white;
+		position: relative;
+		display: inline-block;
+		transition: all .3s;
+		
+		i {
+			@include centerer;
+		}
+
+		&:hover {
+			color: $bayBlue;
+			border: 2px solid $bayBlue;
+		}
+
+	}	
+}
+
+footer.copyright {
+	padding: 0;
+
+	p {
+		text-align: left;
+	}
+}
+
+@import "mediaQuery";

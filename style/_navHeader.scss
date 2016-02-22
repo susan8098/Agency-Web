@@ -1,0 +1,96 @@
+header .wrapper {
+	height: 100vh;
+	position: relative;
+}
+
+a.hamburger {
+	color: white;
+	font-size: 2rem;
+	display: none;
+
+}
+
+header {
+	background: url(../images/hero.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	height: 100vh;
+
+	.inner {
+		background-color: rgba(0,0,0,0.4);
+		height: 100vh;
+	}
+}
+
+.headerNav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 0;
+
+	.headerRight {
+		width: 65%;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-end;
+
+		ul.nav {
+			display: flex;
+			list-style: none;
+			flex-flow: row wrap;
+			justify-content: space-between;
+			align-items: center;
+			font-family: $headerFont;
+
+			li {
+				margin: 5px;
+
+				a {
+					color: white;
+					text-transform: uppercase;
+					letter-spacing: 3px;
+					font-size: 1.2rem;
+					font-weight: 300;
+					padding: 10px;
+					border: 1px solid transparent;
+					transition: all .3s;
+				}
+
+				a:hover {
+					border: 1px solid white;
+				}
+
+			}
+			
+		}
+
+	}
+}
+
+.heroText {
+	text-align: center;
+	color: white;
+	width: 100%;
+	@include centerer;
+
+
+	h4 {
+		font-size: 1.8rem;
+		margin-bottom: 15px;
+	}
+
+	h1 {
+		margin-bottom: 15px;
+	}
+
+	p {
+		font-family: $headerFont;
+		text-transform: uppercase;
+		font-weight: 300;
+		font-size: 1.2rem;
+		letter-spacing: 4px;
+		color: white;
+	}
+
+}

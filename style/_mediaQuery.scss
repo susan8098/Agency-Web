@@ -1,0 +1,125 @@
+@media (min-width: 1081px) {
+	.wrapper {
+		width: 80%;
+	}
+}
+
+@media (max-width: 1080px) {
+		.wrapper {
+		width: 90%;
+	}
+}
+
+/* Portrait tablet and small desktops */
+@media (max-width: 930px) {
+
+
+	header .inner .headerNav .headerRight ul.nav {
+		display: none;
+	}
+
+	nav .hamburger {
+		display: block;
+		text-align: center;
+	}
+	ul.skillsGallery li.skillsItem div.skill {
+		width: 130px;
+		height: 130px;
+	}
+}
+
+@media (max-width: 870px) {
+	ul.skillsGallery li.skillsItem {
+		width: 50%;
+	}
+	div.footerAddress {
+		width: 100%;
+		text-align: center;
+	}
+
+	div.footerBlog, div.footerTag, div.footerSocial {
+		width: 30%;
+	}
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 780px) {
+
+	ul.workGallery li.workItem {
+		width: 33.33%;
+	}
+	ul.workGallery li.workItem:last-child {
+		display: none;
+	}
+	section.clients ul.clientsList li {
+		width: 25%;
+		margin: 2%;
+	}
+}
+
+@media (max-width: 700px) {
+	ul.expertiseList li, ul.serviceList li {
+		width: 43%;
+	}
+	h1 {
+		font-size: 4rem;
+	}
+
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 560px) {
+	ul.workGallery li.workItem {
+		width: 50%;
+	}
+	ul.workGallery li.workItem:last-child, div.footerItem button {
+		display: block;
+	}
+	ul.blogGallery li.blogItem, div.footerBlog, div.footerTag, div.footerSocial {
+		width: 100%;
+	}
+	ul.blogGallery li.blogItem div.blogimg {
+		width: 100%;
+		height: 250px;
+		overflow: hidden;
+	}
+	ul.blogGallery li.blogItem div.blogInfo .blogInfoInner img {
+		width: 20%;
+	}
+	div.footerSocial, footer h3, footer p {
+		text-align: center;
+	}
+	div.socialIcons {
+		margin-top: 10px;
+	}
+	ul.footerBlogList, div.tags {
+		display: none;
+	}
+}
+
+@media (max-width: 480px) {
+	ul.expertiseList li, ul.serviceList li {
+		width: 100%;
+	}
+	ul.serviceList li {
+		justify-content: center;
+	}
+
+	ul.serviceList li .serviceIcon {
+		width: 15%;
+		margin-right: 4%;
+	}
+	ul.workGallery li.workItem {
+		width: 100%;
+	}
+	ul.workGallery li.workItem div.overlay {
+		opacity: 1;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, .3);
+		padding-top: 70%;
+	}
+
+}
